@@ -10,64 +10,64 @@
       "dateCreated": "2025-03-02T00:00:00Z"
     },
     {
-      "id": "Req.Android.1",
+      "id": "System.1.1.Android.1.1",
       "type": "Requirement",
       "name": "Android Todo List Management",
       "description": "The Android client shall provide functionality to create, view, and manage multiple todo lists",
       "status": "Draft",
       "priority": "High",
       "component": "Android",
-      "parent": "Req.Sys.Android.1"
+      "parent": "System.1.1.Android.1"
     },
     {
-      "id": "Req.Android.2",
+      "id": "System.1.1.Android.1.2",
       "type": "Requirement",
       "name": "Android Todo Item Management",
       "description": "The Android client shall allow users to create, read, update, and delete todo items within lists",
       "status": "Draft",
       "priority": "High",
       "component": "Android",
-      "parent": "Req.Sys.Android.1"
+      "parent": "System.1.1.Android.1"
     },
     {
-      "id": "Req.Android.3",
+      "id": "System.1.1.Android.1.3",
       "type": "Requirement",
       "name": "Android Local Storage",
       "description": "The Android client shall store todo data securely in local device storage",
       "status": "Draft",
       "priority": "High",
       "component": "Android",
-      "parent": "Req.Sys.Android.1"
+      "parent": "System.1.1.Android.1"
     },
     {
-      "id": "Req.Android.4",
+      "id": "System.2.1.Android.1.1",
       "type": "Requirement",
       "name": "Android IPFS Backup",
       "description": "The Android client shall backup todo data to IPFS nodes and retrieve it when needed",
       "status": "Draft",
       "priority": "High",
       "component": "Android",
-      "parent": "Req.Sys.Android.2"
+      "parent": "System.2.1.Android.1"
     },
     {
-      "id": "Req.Android.5",
+      "id": "System.3.1.Android.1",
       "type": "Requirement",
       "name": "Android Cryptographic Identity",
       "description": "The Android client shall generate and securely store ed25519 cryptographic keypairs in the device keystore",
       "status": "Draft",
       "priority": "High",
       "component": "Android",
-      "parent": "Req.Sys.3"
+      "parent": "System.3.1"
     },
     {
-      "id": "Req.Android.6",
+      "id": "System.3.2.Android.1",
       "type": "Requirement",
       "name": "Android Identity Exchange",
       "description": "The Android client shall provide a mechanism to securely transfer identity information to other devices using ephemeral keys",
       "status": "Draft",
       "priority": "Medium",
       "component": "Android",
-      "parent": "Req.Sys.4"
+      "parent": "System.3.2"
     }
   ]
 } 

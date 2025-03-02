@@ -7,7 +7,7 @@ import java.time.format.DateTimeFormatter
 /**
  * A simple service that echoes back provided strings
  *
- * This service fulfills Req.Android.1 by demonstrating input handling capability
+ * This service fulfills System.1.1.Android.1 by demonstrating input handling capability
  */
 class EchoService {
     
