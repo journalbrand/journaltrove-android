@@ -1,4 +1,4 @@
-package com.journalbrand.todo
+package com.journalbrand.journaltrove
 
 import java.time.Instant
 import java.time.ZoneOffset

@@ -7,7 +7,7 @@ android {
     compileSdkVersion 33
     
     defaultConfig {
-        applicationId "com.journalbrand.todo"
+        applicationId "com.journalbrand.journaltrove"
         minSdkVersion 24
         targetSdkVersion 33
         versionCode 1

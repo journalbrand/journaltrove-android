@@ -1,16 +1,16 @@
 <!-- === WATCHER HEADER START === -->
-<!-- File: todo-android/README.md -->
+<!-- File: journaltrove-android/README.md -->
 <!-- Managed by file watcher -->
 <!-- === WATCHER HEADER END === -->
-# 🤖 Todo App Android Client
+# 🤖 journaltrove App Android Client
 
-This repository contains the Android Kotlin client implementation for the Todo App ecosystem. It provides a native Android interface for creating, managing, and synchronizing todo lists.
+This repository contains the Android Kotlin client implementation for the journaltrove App ecosystem. It provides a native Android interface for creating, managing, and synchronizing journaltrove lists.
 
 ## 📚 Overview
 
-The Android client is part of the larger Todo App ecosystem that enables secure, decentralized todo list management. Key features include:
+The Android client is part of the larger journaltrove App ecosystem that enables secure, decentralized journaltrove list management. Key features include:
 
-- Local todo list creation and management
+- Local journaltrove list creation and management
 - Secure storage using Android's security capabilities
 - Synchronization with IPFS for cross-device access
 - Cryptographic identity management for secure operations
@@ -48,17 +48,17 @@ The Android client currently implements:
 
 1. Clone this repository:
 ```bash
-git clone https://github.com/journalbrand/todo-android.git
+git clone https://github.com/journalbrand/journaltrove-android.git
 ```
 
 2. Open the project in Android Studio:
 ```bash
-studio todo-android
+studio journaltrove-android
 ```
 
 3. Build the application:
 ```bash
-cd todo-android
+cd journaltrove-android
 ./gradlew build
 ```
 
@@ -70,19 +70,19 @@ cd todo-android
 ### Project Structure
 
 ```
-todo-android/
+journaltrove-android/
 ├── app/                    # Main application module
 │   ├── build.gradle        # Module-level build configuration
 │   └── src/
 │       ├── main/           # Main source code
 │       │   ├── java/       # Kotlin/Java sources
-│       │   │   └── com/journalbrand/todo/
+│       │   │   └── com/journalbrand/journaltrove/
 │       │   │       └── EchoService.kt # Initial service implementation
 │       │   ├── res/        # Android resources
 │       │   └── AndroidManifest.xml # App manifest
 │       └── test/           # Unit tests
 │           ├── java/       # Test sources
-│           │   └── com/journalbrand/todo/
+│           │   └── com/journalbrand/journaltrove/
 │           │       └── EchoServiceTest.kt # Tests for EchoService
 │           └── test-mappings.jsonld # Mapping of tests to requirements
 ├── build.gradle            # Project-level build configuration
@@ -102,8 +102,8 @@ The Android client implements specific requirements defined in the JSON-LD forma
 ### Key Requirements
 
 - **System.1.1.Android.1**: Input handling capability (implemented in EchoService)
-- **System.1.1.Android.1.1**: Todo List Management (planned)
-- **System.1.1.Android.1.2**: Todo Item Management (planned)
+- **System.1.1.Android.1.1**: journaltrove List Management (planned)
+- **System.1.1.Android.1.2**: journaltrove Item Management (planned)
 - **System.1.1.Android.1.3**: Android Local Storage (planned)
 - **System.2.1.Android.1.1**: Android IPFS Backup (planned)
 - **System.3.1.Android.1**: Android Cryptographic Identity (planned)
@@ -121,7 +121,7 @@ All code must be thoroughly tested and mapped to requirements:
 
 ## 🔄 CI/CD Integration
 
-This repository integrates with the Todo App CI/CD pipeline:
+This repository integrates with the journaltrove App CI/CD pipeline:
 
 - **CI Workflow**: `.github/workflows/ci.yml`
 - **Artifacts**: Test results in JSON-LD format
@@ -131,9 +131,9 @@ This repository integrates with the Todo App CI/CD pipeline:
 
 The Android client is part of a multi-repository ecosystem:
 
-- [todo-system](https://github.com/journalbrand/todo-system) - System-level coordination, requirements and CI/CD orchestration
-- [todo-ios](https://github.com/journalbrand/todo-ios) - iOS client
-- [todo-ipfs](https://github.com/journalbrand/todo-ipfs) - IPFS node implementation
+- [journaltrove-system](https://github.com/journalbrand/journaltrove-system) - System-level coordination, requirements and CI/CD orchestration
+- [journaltrove-ios](https://github.com/journalbrand/journaltrove-ios) - iOS client
+- [journaltrove-ipfs](https://github.com/journalbrand/journaltrove-ipfs) - IPFS node implementation
 
 ## 📝 Contributing
 

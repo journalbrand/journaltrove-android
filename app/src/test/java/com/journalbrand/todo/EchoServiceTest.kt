@@ -1,4 +1,4 @@
-package com.journalbrand.todo
+package com.journalbrand.journaltrove
 
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertTrue
