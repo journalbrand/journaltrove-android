@@ -1,0 +1,73 @@
+{
+  "@context": "https://raw.githubusercontent.com/journalbrand/todo-system/main/requirements/context/requirements-context.jsonld",
+  "@graph": [
+    {
+      "id": "Android",
+      "type": "Component",
+      "name": "Android Client",
+      "description": "The Android Kotlin client application",
+      "version": "0.1.0",
+      "dateCreated": "2025-03-02T00:00:00Z"
+    },
+    {
+      "id": "Req.Android.1",
+      "type": "Requirement",
+      "name": "Android Todo List Management",
+      "description": "The Android client shall provide functionality to create, view, and manage multiple todo lists",
+      "status": "Draft",
+      "priority": "High",
+      "component": "Android",
+      "parent": "Req.Sys.Android.1"
+    },
+    {
+      "id": "Req.Android.2",
+      "type": "Requirement",
+      "name": "Android Todo Item Management",
+      "description": "The Android client shall allow users to create, read, update, and delete todo items within lists",
+      "status": "Draft",
+      "priority": "High",
+      "component": "Android",
+      "parent": "Req.Sys.Android.1"
+    },
+    {
+      "id": "Req.Android.3",
+      "type": "Requirement",
+      "name": "Android Local Storage",
+      "description": "The Android client shall store todo data securely in local device storage",
+      "status": "Draft",
+      "priority": "High",
+      "component": "Android",
+      "parent": "Req.Sys.Android.1"
+    },
+    {
+      "id": "Req.Android.4",
+      "type": "Requirement",
+      "name": "Android IPFS Backup",
+      "description": "The Android client shall backup todo data to IPFS nodes and retrieve it when needed",
+      "status": "Draft",
+      "priority": "High",
+      "component": "Android",
+      "parent": "Req.Sys.Android.2"
+    },
+    {
+      "id": "Req.Android.5",
+      "type": "Requirement",
+      "name": "Android Cryptographic Identity",
+      "description": "The Android client shall generate and securely store ed25519 cryptographic keypairs in the device keystore",
+      "status": "Draft",
+      "priority": "High",
+      "component": "Android",
+      "parent": "Req.Sys.3"
+    },
+    {
+      "id": "Req.Android.6",
+      "type": "Requirement",
+      "name": "Android Identity Exchange",
+      "description": "The Android client shall provide a mechanism to securely transfer identity information to other devices using ephemeral keys",
+      "status": "Draft",
+      "priority": "Medium",
+      "component": "Android",
+      "parent": "Req.Sys.4"
+    }
+  ]
+} 
