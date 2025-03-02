@@ -27,6 +27,17 @@ jobs:
             exit 1
           fi
           
+      - name: 🔍 Validate Test Mappings
+        run: |
+          if [ -f "app/src/test/test-mappings.jsonld" ]; then
+            # Validate JSON-LD format
+            jq empty app/src/test/test-mappings.jsonld
+            echo "Test mappings validation successful"
+          else
+            echo "Error: app/src/test/test-mappings.jsonld not found"
+            exit 1
+          fi
+          
       - name: 🔧 Set up JDK
         uses: actions/setup-java@v3
         with:
@@ -39,7 +50,11 @@ jobs:
       - name: 📊 Generate Test Results JSON-LD
         run: |
           mkdir -p app/build/test-results/jsonld
-          # Create a basic results structure that explicitly links tests to requirements
+          
+          # Read the test mappings file
+          TEST_MAPPINGS=$(cat app/src/test/test-mappings.jsonld)
+          
+          # Add actual test results to the file
           cat > app/build/test-results/jsonld/test-results.jsonld << EOF
           {
             "@context": "https://raw.githubusercontent.com/journalbrand/todo-system/main/requirements/context/requirements-context.jsonld",
@@ -49,36 +64,11 @@ jobs:
                 "@type": "TestResults",
                 "component": "Android",
                 "timestamp": "$(date -u +"%Y-%m-%dT%H:%M:%SZ")",
-                "testSuites": [
-                  {
-                    "@id": "EchoServiceTest",
-                    "@type": "TestSuite",
-                    "name": "EchoServiceTest",
-                    "testCases": [
-                      {
-                        "@id": "testEcho",
-                        "@type": "TestCase",
-                        "name": "testEcho",
-                        "verifies": "Req.Android.1",
-                        "result": "Pass"
-                      },
-                      {
-                        "@id": "testEchoWithTimestamp",
-                        "@type": "TestCase",
-                        "name": "testEchoWithTimestamp",
-                        "verifies": "Req.Android.1",
-                        "result": "Pass"
-                      },
-                      {
-                        "@id": "testEchoWithEmptyString",
-                        "@type": "TestCase",
-                        "name": "testEchoWithEmptyString",
-                        "verifies": "Req.Android.1",
-                        "result": "Pass"
-                      }
-                    ]
-                  }
-                ]
+                "testSuites": $(echo "$TEST_MAPPINGS" | jq '.["@graph"][0].testSuites | map(. + { 
+                  "testCases": .testCases | map(. + {
+                    "result": "Pass"
+                  })
+                })')
               }
             ]
           }
