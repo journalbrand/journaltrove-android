@@ -33,6 +33,27 @@
               "description": "Verifies that the echo method handles empty strings correctly"
             }
           ]
+        },
+        {
+          "@id": "TimeServiceTest",
+          "@type": "TestSuite",
+          "name": "TimeServiceTest",
+          "testCases": [
+            {
+              "@id": "testCurrentTime",
+              "@type": "TestCase",
+              "name": "testCurrentTime",
+              "verifies": "System.4.Android.1",
+              "description": "Verifies that the currentTime method returns an accurate time"
+            },
+            {
+              "@id": "testCurrentTimeString",
+              "@type": "TestCase",
+              "name": "testCurrentTimeString",
+              "verifies": "System.4.Android.1",
+              "description": "Verifies that the currentTimeString method returns a properly formatted time string"
+            }
+          ]
         }
       ]
     }

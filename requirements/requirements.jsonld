@@ -88,6 +88,16 @@
       "priority": "Medium",
       "component": "Android",
       "parent": "System.3.2"
+    },
+    {
+      "id": "System.4.Android.1",
+      "type": "Requirement",
+      "name": "Android Timekeeping Service",
+      "description": "The Android app shall provide the current system time upon request",
+      "status": "Draft",
+      "priority": "High",
+      "component": "Android",
+      "parent": "System.4"
     }
   ]
 } 
